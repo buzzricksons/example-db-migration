@@ -1,5 +1,7 @@
 /**
- * Created by yoda on 2017/06/14.
+ * Excuting DB Migration by flayway.
+ * This is not immutable class.
+ *
  */
 public class DBMigrator {
 }
