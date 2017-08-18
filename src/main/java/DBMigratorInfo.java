@@ -1,19 +1,17 @@
-import lombok.Builder;
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 
 /**
  * DBマイグレーションで使われる設定を表すクラスです。
  *
  * @author HyungCheol Kim
  */
-@Data
+@Getter
 @Builder
 public class DBMigratorInfo {
     @NonNull
-    private String jdbc;
+    private final String jdbc;
     @NonNull
-    private String userName;
+    private final String userName;
     @NonNull
-    private String password;
+    private final String password;
 }

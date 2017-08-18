@@ -1,3 +1,4 @@
+import lombok.Getter;
 import org.flywaydb.core.Flyway;
 
 import lombok.Builder;
@@ -10,7 +11,7 @@ import lombok.NonNull;
  *
  * @author HyungCheol Kim
  */
-@Data
+@Getter
 @Builder
 public class DBMigrator {
     @NonNull
