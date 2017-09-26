@@ -2,7 +2,6 @@ import lombok.Getter;
 import org.flywaydb.core.Flyway;
 
 import lombok.Builder;
-import lombok.Data;
 import lombok.NonNull;
 
 /**
@@ -17,7 +16,7 @@ public class DBMigrator {
     @NonNull
     private Flyway flyway;
     @NonNull
-    private DBMigratorInfo info;
+    private DataSource dataSource;
 
     public int migrate() {
         return flyway.migrate();

@@ -7,11 +7,10 @@ import lombok.*;
  */
 @Getter
 @Builder
-public class DBMigratorInfo {
+public class DataSource {
     @NonNull
     private final String jdbc;
     @NonNull
     private final String userName;
-    @NonNull
     private final String password;
 }
