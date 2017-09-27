@@ -1,21 +1,9 @@
-import org.flywaydb.core.Flyway;
-
 public class DBMigratorApplication {
     public static void main(String[] args) {
-        DataSource dataSource = DataSource.builder()
-                .jdbc("jdbc:h2:mem:example-app;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE")
-                .userName("sa")
-                .password(null)
-                .build();
-
-        Flyway flyway = new Flyway();
-        flyway.setDataSource(dataSource.getJdbc(), dataSource.getUserName(), dataSource.getPassword());
-
-        DBMigrator migrator = DBMigrator.builder()
-                .flyway(flyway)
-                .dataSource(dataSource)
-                .build();
-
+        DBMigrator migrator = DBMigratorUtils.makeExampleMigrator();
+        System.out.println(String.format("Current Version： %s", migrator.currentVersion()));
+        System.out.println(String.format("DBマイグレーション件数： %s件", migrator.migrateRows()));
         System.out.println(String.format("DBマイグレーション成功! (%s件)", migrator.migrate()));
+        System.out.println(String.format("Current Version： %s", migrator.currentVersion()));
     }
 }

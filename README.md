@@ -1,2 +1,2 @@
 # study-db-migration
-Repository for studying db migration using [flyway](https://flywaydb.org/).
+Db migration example using [flyway](https://flywaydb.org/) and H2 database.
