@@ -1,8 +1,9 @@
-import lombok.Getter;
-import org.flywaydb.core.Flyway;
+package migrator;
 
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NonNull;
+import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.MigrationInfo;
 
 /**

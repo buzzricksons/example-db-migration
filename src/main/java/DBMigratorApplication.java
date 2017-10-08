@@ -1,3 +1,6 @@
+import migrator.DBMigrator;
+import migrator.DBMigratorUtils;
+
 public class DBMigratorApplication {
     public static void main(String[] args) {
         DBMigrator migrator = DBMigratorUtils.makeExampleMigrator();
