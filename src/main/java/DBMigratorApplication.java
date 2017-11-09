@@ -4,6 +4,7 @@ import org.h2.tools.Server;
 
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.Properties;
 import java.util.Scanner;
 
 /**
@@ -14,10 +15,11 @@ import java.util.Scanner;
 public class DBMigratorApplication {
     public static void main(String[] args) throws SQLException {
         //Start H2 Web Server
-        Server webServer = Server.createWebServer("-webAllowOthers","-webPort","8089").start();
-        Server server = Server.createTcpServer("-tcpAllowOthers","-tcpPort","9099").start();
+        Properties prop = DBMigratorUtils.getProperty();
+        Server webServer = Server.createWebServer("-webAllowOthers","-webPort",prop.getProperty("webPort")).start();
+        Server server = Server.createTcpServer("-tcpAllowOthers","-tcpPort",prop.getProperty("tcpPort")).start();
 
-
+        // Start DB Migration App
         for(;;) {
             DBMigrator migrator = DBMigratorUtils.makeExampleMigrator();
             System.out.println(String.format("[[[[Current DB Version： %s]]]]", migrator.currentVersion()));
