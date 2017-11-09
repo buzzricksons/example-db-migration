@@ -7,8 +7,7 @@ Sample for DB Migration with flyway,H2 database and java.
 1. If you already use the 8089 or 9099 port, then edit Web Port and Tcp Port of `resources/setting/setup.properties` file for your local.(default:webPort=`8089`,tcpPort=`9099`) 
 2. Run main method of DBMigratorApplication.class.
 3. Connect `http://localhost:8089/` (If you changed web port, then input your port number instead of 8089)
-4. Push 接続 button. You can move to H2 console page.
-<p>
+4. Push 接続 button. You can move to H2 console page.  
 ![](https://raw.githubusercontent.com/buzzricksons/sample-db-migration/master/src/main/resources/image/1.png)
 5. Below message printed in IDE console.
 ```$xslt
