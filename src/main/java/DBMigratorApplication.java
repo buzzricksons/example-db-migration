@@ -3,7 +3,6 @@ import migrator.DBMigratorUtils;
 import org.h2.tools.Server;
 
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.Properties;
 import java.util.Scanner;
 
