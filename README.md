@@ -1,5 +1,5 @@
-# Sample DB Migration
-Sample for DB Migration with flyway,H2 database and java.
+# Example DB Migration
+Example for DB Migration with flyway,H2 database and java.
 - [flyway](https://flywaydb.org/)
 - [H2 database](http://www.h2database.com/)
 
